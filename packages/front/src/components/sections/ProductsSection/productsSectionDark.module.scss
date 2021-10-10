@@ -1,0 +1,64 @@
+@import "../../../shared/scss/themes/dark";
+
+
+$iconSize: 2rem;
+
+
+.referenceContainer {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  color: $textColor;
+  .background {
+    position: absolute;
+    background-color: #571616;
+    border-radius: 1rem;
+    width: 100%;
+    height: 80%;
+    top: 10%;
+  }
+  .card {
+    background-color: #332929;
+    border: solid 0.2rem #909090;
+    padding: 1rem 2rem;
+    width: 100%;
+    margin: auto;
+    position: relative;
+    border-radius: 1rem;
+    .baristaImage {
+      border-radius: 50%;
+      width: $iconSize * 3;
+      height: $iconSize * 3;
+      border: solid 0.2rem $textColor;
+      margin: 0.7rem 0;
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .referenceContainer {
+    .card {
+      width: 50%;
+    }
+  }
+}
+
+.productsContainer {
+  color: $secondary;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  margin: 2rem;
+  width: 100%;
+}
+
+.bottomBar {
+  width: 100vw;
+  height: 0.3rem;
+  background-color: #332929;
+  border-radius: 1rem;
+  margin-top: 2rem;
+}

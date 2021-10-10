@@ -1,0 +1,10 @@
+$iconSize: 2rem;
+
+.paragraphDivider {
+  content: "";
+  margin: 1.2rem 0;
+  height: $iconSize;
+  width: $iconSize;
+  background: url("/public/images/coffee-bean-color.svg") no-repeat $iconSize;
+  background-position: center;
+}

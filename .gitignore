@@ -1,0 +1,6 @@
+/.vagrant
+
+*.log
+/**/runc-v*
+node_modules/
+/**/*.env

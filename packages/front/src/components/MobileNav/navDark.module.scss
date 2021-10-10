@@ -1,0 +1,33 @@
+@import "../../shared/scss/themes/dark";
+
+.nav1 {
+    background: $primary;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    top: 0;
+    left: 0;
+    max-width: $sideMenuWidth;
+    height: 100vh;
+    z-index: 100;
+    overflow-y: hidden;
+    a {
+      border-top: 1px solid $border-color;
+      color: $secondary;
+      text-transform: uppercase;
+      font-weight: 600;
+      letter-spacing: 0.1rem;
+      font-size: 14px;
+      line-height: 1.8;
+      &:hover,
+      &:focus {
+        background: $primary;
+        color: $light;
+        cursor: pointer;
+      }
+    }
+  }
+  
+  .contrastIcon {
+      width: 1rem;
+  }

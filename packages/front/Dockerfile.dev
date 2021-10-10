@@ -1,0 +1,10 @@
+FROM node:10.16.0-alpine AS dev
+
+WORKDIR /app
+
+COPY package.json *yarn* /app/
+RUN yarn global add webpack-dev-server typed-scss-modules
+RUN yarn
+ENV PATH /app/node_modules/.bin:$PATH
+# node_modules are ignored because of .dockerignore file
+COPY ./ /app/

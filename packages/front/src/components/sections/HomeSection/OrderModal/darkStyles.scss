@@ -1,0 +1,60 @@
+@import "../../../../shared/scss/themes/dark";
+
+.modal-body > .row {
+  justify-content: center;
+  textarea {
+    resize: none;
+  }
+}
+
+.modal-content{
+    .modal-dark {
+        background-color: $primary;
+        color: $secondary;
+        font-size: 1.5rem;
+        .form-control {
+            font-size: 1.2rem;
+            color: $primary;
+            font-weight: 900;
+            &::placeholder {
+                opacity: 0.5; 
+            }
+        }
+        .modal-header {
+            button {
+                font-weight: 900;
+                font-size: 3rem;
+            }
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .modal-title {
+                font-size: 2rem;
+            }
+        }
+        button {
+            background-color: $secondary;
+            border: .1rem solid $secondary;
+            color:$primary;
+            font-weight: 900;
+            font-size: 1.5rem;
+            &:hover {
+                background-color:$primary;
+                color:$secondary;
+                border: .1rem solid $secondary;
+            }
+        }
+    }
+}
+
+.react-datepicker__input-container > input {
+    color: #495057;
+    width: 100%;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    height: calc(1.5em + 0.75rem + 2px);
+  }
+  
+  .react-datepicker-wrapper {
+    width: 100%;
+  }

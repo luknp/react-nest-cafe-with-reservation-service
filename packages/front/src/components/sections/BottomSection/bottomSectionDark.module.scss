@@ -1,0 +1,130 @@
+@import "../../../shared/scss/themes/dark";
+
+.bottomSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(24, 24, 24);
+    color: $textColor;
+    .row {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem 2rem;
+        text-align: center;
+        .aboutUs {
+            width: 100%;
+            .title {
+                text-transform: uppercase;
+                padding-left: 5px;
+                border-left: 4px solid $textColor; 
+                font-weight: 800;
+                margin-bottom: 2rem;
+            }
+            .logo {
+                display: flex;
+                justify-content: center;
+            }
+            p {
+                margin: 1rem 0.5rem;
+                font-size: 1rem;
+                text-align: center;
+                text-align: justify;
+            }
+            
+        }
+        .openingHours {
+            width: 100%;
+            .title {
+                text-transform: uppercase;
+                padding-left: 5px;
+                border-left: 4px solid $textColor; 
+                font-weight: 800;
+                margin-bottom: 2rem;
+            }
+            ul {
+                list-style-type: none;
+                li {
+                    line-height: 2rem;
+                    border-bottom: 1px solid #333; 
+                    font-size: 1rem;
+                }
+                li:last-child {
+                    border-bottom: none; 
+                }
+                .today {
+                    color: $textColor; 
+                    border-bottom: 3px solid #333; 
+                    font-weight: 900;
+                }
+            }
+        }
+        .contact {
+            margin: 0;
+            width: 100%;
+            .title {
+                text-transform: uppercase;
+                padding-left: 5px;
+                border-left: 4px solid $textColor; 
+                font-weight: 800;
+                margin-bottom: 2rem;
+            }
+            a {
+                display: flex;
+                justify-content: center;
+                color: $secondary;
+                margin: 0 0.8rem;
+                font-size: 1.2rem;
+                text-decoration: none;
+                transition: 0.3s linear;
+            }
+            h5 {
+                text-align: center;
+            }
+            .ikons {
+                display: flex;
+                justify-content: center;
+                a {
+                    svg {
+                        color: $textColor;
+                    }
+                }
+            }
+        }
+    }
+    .footerContainer {
+        .bottomText {
+            margin: 0;
+            text-align: center;
+            padding: 1rem;
+            font-size: .8rem;
+        }
+        .bar {
+            height: .1rem;
+            width: 90vw;
+            background: $fourth;
+        }
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .bottomSection {
+        .row {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: flex-start;
+            .aboutUs {
+                width: 33%;
+            }
+            .openingHours {
+                width: 33%;
+            }
+            .contact {
+                width: 34%;
+            }
+        }
+    }
+}

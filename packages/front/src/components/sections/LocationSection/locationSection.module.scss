@@ -1,0 +1,64 @@
+@import "../../../shared/scss/themes/light";
+
+.locationtSection{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h3 {
+        margin-bottom: 2rem;
+    }
+    .locationLayout {
+        .locationDescContainer {
+            z-index: 10;
+            color: $secondary;
+            background: $third;
+            margin: 0;
+            padding: 1rem 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            .head {
+                display: flex;
+                h3 {
+                    text-transform: uppercase;
+                    margin-right: 1rem;
+                }
+            }
+            .description {
+                p {
+                    margin: 1rem 1rem;
+                    text-align: justify;
+                    font-weight: 900;
+                    font-size: 1rem;
+                }
+            }
+        }
+        .map {
+            background: #3b3939;
+            text-align: center;
+            box-shadow: 0 0 20px #00000060;
+            position: relative;
+            height: 30vh;
+            margin: 0;
+        }
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .locationtSection{
+        .locationLayout {
+            width: 60%;
+            margin: auto;
+            .locationDescContainer {
+                border-radius: .5rem;
+                box-shadow: 0 0 40px -10px #000;
+            }
+            .map {
+                border-radius: .5rem;
+                box-shadow: 0 0 40px -10px #000;
+            }
+        }
+    }
+}

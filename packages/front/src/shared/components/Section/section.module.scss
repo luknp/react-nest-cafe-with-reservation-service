@@ -1,0 +1,17 @@
+@import "../../scss/custom.scss";
+
+.pageSection {
+    display: flex;
+    width:100vw;
+    max-height: 100vh;
+    align-items: center;
+    &FullHeight {
+        height: 100vh;
+    }
+    &Col {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}

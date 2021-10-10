@@ -1,0 +1,15 @@
+@import "./custom";
+
+.btnNav {
+  color: $white;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  &:hover,
+  &:focus {
+    background: $white;
+    color: $secondary;
+    cursor: pointer;
+  }
+}

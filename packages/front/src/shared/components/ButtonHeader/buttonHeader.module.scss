@@ -1,0 +1,24 @@
+@import "../../scss/custom";
+
+.btn1 {
+  font-size: 20px;
+  padding: 0;
+  a {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 46px;
+    width: 100%;
+    text-decoration: none;
+    outline: 0;
+    background: $light;
+    color: $dark;
+    &:hover,
+    &:focus {
+      background: $primary;
+      color: $light;
+      cursor: pointer;
+    }
+  }
+}

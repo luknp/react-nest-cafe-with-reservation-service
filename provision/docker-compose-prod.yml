@@ -1,0 +1,43 @@
+version: "3.4"
+services:
+
+  mongo:
+    image: mongo
+    container_name: mongo_prod
+    restart: always
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME
+      - MONGO_INITDB_ROOT_PASSWORD
+    volumes:
+      - logs:/var/log/mongodb
+      - mongo:/data/db
+    command: ['--logpath', '/var/log/mongodb/mongo.log']
+
+  server:
+    build: 
+      context: ../packages/back
+    container_name: server_prod
+    environment:
+      - NODE_ENV=production
+    ports:
+    - "3000:3000"
+    depends_on:
+      - mongo
+    working_dir: /server/dist
+    command: "node main.js"
+
+  front:
+    build: 
+      context: ../packages/front
+      target: prod
+    container_name: front_prod
+    ports:
+    - "80:80"
+    # depends_on:
+    # - server
+    working_dir: /app
+    command: "nginx -g 'daemon off;'"
+    
+volumes:
+  logs:
+  mongo:

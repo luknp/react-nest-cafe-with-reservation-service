@@ -1,0 +1,33 @@
+@import "../../../../shared/scss/themes/dark";
+
+$iconSize: 2rem;
+
+.card {
+    background-color: #332929;
+    border: solid 0.2rem #909090;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    margin: auto;
+    position: relative;
+    color: $light;
+    .bottomRow {
+      color: $textColor;
+      display: flex;
+      justify-content: center;
+      svg {
+        margin-left: 1rem;
+        border: solid 0.15rem white;
+        padding: 0.2rem 0.2rem;
+        border-radius: 50%;
+      }
+    }
+    .coffeeImage {
+      border-radius: 50%;
+      width: $iconSize * 3;
+      height: $iconSize * 3;
+      border: solid 0.2rem $textColor;
+      margin: auto;
+      margin-bottom: 0.5rem;
+    }
+  }
+  

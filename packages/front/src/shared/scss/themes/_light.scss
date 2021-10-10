@@ -1,0 +1,19 @@
+@import "../sharedStyles";
+
+$primary: rgb(255, 255, 255);
+$secondary: rgb(24, 24, 24);
+$third: rgb(230,230,230);
+$fourth: rgb(155, 155, 155);
+$fifth: rgb(48, 47, 47);
+$sixth: #3b3939;
+$textColor: $primary;
+
+:export {
+    primary: $primary;
+    secondary: $secondary;
+    third: $third;
+    fourth: $fourth;
+    fifth: $fifth;
+    sixth: $sixth;
+    textColor: $textColor
+}
